@@ -20,15 +20,21 @@ body {
   height: 100%;
 }
 
-img {
-  max-width: 100%;
-}
-
 body {
   min-height: 100%;
   line-height: 1.5;
   font-family: "Montserrat", sans-serif;
   display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
 }
 
 p {
@@ -36,27 +42,27 @@ p {
 }
 
 .one {
-  flex: 0 0 40%;
+  flex: 1 1 40%;
   background-image: url(./halie-west.jpg);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
-  height: auto;
-}
-
-.two {
-  flex: 0 0 60%;
-}
-
-.one,
-.two {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
-.third {
-  flex-basis: 33.33%;
-  flex-grow: 1;
+.two {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.third,
+.secOne,
+.secTwo,
+.secThree {
+  flex: 1 0 45vh;
 }
 
 .logo-container {
@@ -67,6 +73,7 @@ p {
 
 .logo {
   height: 50%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,7 +132,7 @@ img {
 }
 
 .intro {
-  margin-bottom: 2.8rem;
+  margin-bottom: 4.5rem;
 }
 
 .para {
@@ -153,10 +160,14 @@ img {
   padding: 1.5rem 0;
 }
 
+.formSec {
+  width: 100%;
+}
+
 .cat {
   display: flex;
-  gap: 1rem;
   width: 75%;
+  gap: 3rem;
 }
 
 .inputSec {
@@ -166,15 +177,25 @@ img {
 }
 
 button,
-input,
-select,
-textarea {
+input {
   font-family: inherit;
   font-size: 100%;
 }
 
 input {
-  padding: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+input[type="password"]:invalid {
+  border-color: red;
+}
+
+input:focus label {
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  color: dimgrey;
 }
 
 .cat:first-of-type,
@@ -182,7 +203,33 @@ input {
   padding: 1rem 0;
 }
 
-.secOne,
-.logo-container {
-  height: 33vh;
+.secTwo,
+.secThree {
+  display: flex;
+  justify-content: flex-start;
+}
+
+button {
+  background-color: #596d48;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 1.5rem 0 2rem 0;
+}
+
+button:hover,
+.buttonSec a:hover {
+  filter: brightness(85%);
+}
+
+.buttonSec,
+button {
+  font-weight: 600;
+}
+
+.buttonSec a {
+  color: #596d48;
+  text-decoration: none;
 }
