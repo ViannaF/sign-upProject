@@ -250,6 +250,10 @@ button {
     width: 100%;
   }
 
+  .space {
+    padding: 2rem 1rem 0 1rem;
+  }
+
   .noTwo {
     display: none;
   }
@@ -259,9 +263,5 @@ button {
   .cat {
     flex-direction: column;
     gap: 2rem;
-  }
-
-  .space {
-    padding: 2rem 1rem 0 1rem;
   }
 }
