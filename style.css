@@ -58,6 +58,12 @@ p {
   flex-direction: column;
 }
 
+form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .third,
 .secOne,
 .secTwo,
@@ -191,7 +197,11 @@ input[type="password"]:invalid {
   border-color: red;
 }
 
-input:focus label {
+input:focus {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+label {
   text-transform: uppercase;
   font-family: "Courier New", Courier, monospace;
   font-weight: 600;
@@ -232,4 +242,15 @@ button {
 .buttonSec a {
   color: #596d48;
   text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .noTwo {
+    display: none;
+  }
 }
