@@ -153,10 +153,6 @@ img {
   font-size: 1.5rem;
 }
 
-.space {
-  padding-left: 2rem;
-}
-
 .encourage {
   font-weight: 500;
   font-size: 2rem;
@@ -168,6 +164,10 @@ img {
 
 .formSec {
   width: 100%;
+}
+
+.space {
+  padding: 0 2rem;
 }
 
 .cat {
@@ -252,5 +252,16 @@ button {
 
   .noTwo {
     display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cat {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .space {
+    padding: 2rem 1rem 0 1rem;
   }
 }
